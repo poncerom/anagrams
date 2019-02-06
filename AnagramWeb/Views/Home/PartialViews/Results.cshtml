@@ -1,0 +1,25 @@
+﻿@model AnagramWeb.Models.AnagramsViewModel
+
+<div class="col-md-12" id="anagram_results">
+    @if (Model.Anagrams.Count > 0)
+    {
+        <br />
+        <br />
+        <p>Ellapsed time: @Model.EllapsedTime ms</p>
+        <br />
+        <p>Anagram values:</p>
+        <ul>
+        
+            @foreach (var anagrams in Model.Anagrams)
+            {
+                <li><p>@anagrams</p></li>
+            }
+        </ul>
+    }
+    else
+    {
+        <br />
+        <br />
+        <p>The word doesn't have anagrams :(</p>
+    }
+</div>
